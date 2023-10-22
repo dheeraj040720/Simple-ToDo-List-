@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <style>
+
+        table,tr,td{
+        border:1px solid black;
+
+       }
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+<h1>Edit Page</h1>
+
+
+
+<form th:action="@{/updateTasks}"  th:object="${Todos}"  method="post">
+
+  <label for="username"> UserName</label>
+  <input type="text" th:field="*{userName}" id="username">
+
+
+  <label for="task"> Add new Task</label>
+  <input type="text" th:field="*{taskDescription}" id="task">
+
+
+  <label for="date"> Target Date  </label>
+  <input type="date" th:field="*{targetDate}" id="date">
+
+
+  <input type="hidden" th:field="*{id}" id="hid">
+
+
+  <button type="submit">update</button>
+
+</form>
+
+
+
+
+
+
+</body>
+</html>
