@@ -42,6 +42,15 @@
 
   <input type="hidden" th:field="*{id}" id="hid">
 
+  <label> Status </label>
+  <select name="" id=""  th:field="*{status}">
+    <option value="null">---selected---</option>
+    <option value="completed"    >Completed</option>
+    <option value="in process"   > In process</option>
+    <option value="delayed"   > Delayed </option>
+  </select>
+
+
 
   <button type="submit">update</button>
 

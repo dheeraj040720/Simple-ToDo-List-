@@ -24,6 +24,18 @@ public Todo() {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    public String getStatus() {
+        return status;
+    }
+
+    public Todo(String status) {
+        this.status = status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public Todo(int id, String taskDescription, String userName, String targetDate) {
         this.id = id;
         this.taskDescription = taskDescription;
@@ -70,4 +82,6 @@ public Todo() {
 
 
     private String targetDate;
+
+    private String status;
 }
